@@ -27,6 +27,15 @@ class User extends Entry implements Authenticatable
     private static $passwordStrategy;
 
     /**
+     * Method getAuthPasswordName
+     * @return string
+     */
+    public function getAuthPasswordName()
+    {
+        return 'password';
+    }
+
+    /**
      * Password will be processed using given callback before saving.
      *
      * @param callable $strategy
